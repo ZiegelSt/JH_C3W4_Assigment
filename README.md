@@ -19,6 +19,11 @@ activity. Subsquently relables the label that were clobberd by aggregate
 
 Perfrom the following steps to execute the script
 
-* Save Samsung data according to Coureser Instructions and save it in UCI_HAR_Dataset
-* Download run_analysis.R 
+* Download Samsung data according to Coursera Instructions and unzip it to directory UCI_HAR_Dataset
+* Download run_analysis.R to direcotry containing UCI_HAR_Dataset
 * execute source("run_analysis.R")
+
+## Requirements
+Packages :
+* plyr
+* dplyr
