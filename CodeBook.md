@@ -10,7 +10,8 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 ## The tidy data
 In addition of the features of the reference provided the subject (in form of an ID) and
-the activity (in the form of a self explanatory string) are given
+the activity (in the form of a self explanatory string) are given. Furthermore the feature names
+are cleaned in accordance with "tidy data standards" 
 
 ## The records
 Each (numbered) row corresponds to one subjects mean values of the 66 features described below
