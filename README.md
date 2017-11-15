@@ -1,5 +1,6 @@
 # README
 
+## Description
 The script run_analysis.R performs the following steps:
     
 * Loads the data from file
@@ -13,3 +14,11 @@ descriptive character
 are retained
 * uses aggregate to compute the mean of the remaining variables for each subject and 
 activity. Subsquently relables the label that were clobberd by aggregate
+
+## Execution
+
+Perfrom the following steps to execute the script
+
+* Save Samsung data according to Coureser Instructions and save it in UCI_HAR_Dataset
+* Download run_analysis.R 
+* execute source("run_analysis.R")
