@@ -37,7 +37,13 @@ total$activity <- mapvalues(total$activity , from = activityLabels$V1, to = as.c
 
 ## extract only variables of mean and standard deviation 
 ## while keeping subject and label in place
-total <- total[grepl("mean[^F]|std|activity|subject",names(total))]
+total <- total[grepl("mean[\\(]|std[\\(]|activity|subject",names(total))]
+cleanNames <- names(total)
+cleanNames <- gsub("[\\(\\)]","",cleanNames)
+cleanNames <- gsub("[,-]","_",cleanNames)
+cleanNames <- tolower(cleanNames)
+names(total) <- cleanNames
+
 nFeature <- ncol(total)-2
 
 ## create mean over label and subject
@@ -46,4 +52,4 @@ totalMean <- aggregate(total[1:nFeature], by=list(total$subject,total$activity) 
 ## update labels clobbered by aggregate
 totalMean <- dplyr::rename(totalMean, subject = Group.1, activity = Group.2)
 
-write.csv(totalMean,file="tidy.txt",row.name=FALSE)
+write.table(totalMean,file="tidy.txt",row.name=FALSE)
