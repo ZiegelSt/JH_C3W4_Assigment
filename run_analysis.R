@@ -46,4 +46,4 @@ totalMean <- aggregate(total[1:nFeature], by=list(total$subject,total$activity) 
 ## update labels clobbered by aggregate
 totalMean <- dplyr::rename(totalMean, subject = Group.1, activity = Group.2)
 
-write.csv(totalMean,file="tidy.csv")
+write.csv(totalMean,file="tidy.txt",row.name=FALSE)
